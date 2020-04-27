@@ -11,8 +11,11 @@
         * [1.9 name and addresses:IPv4](CS144/section1/cs144_1.9.md)
 * [CS 61C](CS61C/README.md)
   * [1.4 C Memory Mangement, Usage](CS61C/CS61C1-4.md)
+  * [Intro to Assembly Language, MIPS Intro](CS61C/CS61C1-5.md)
 * [CS 61B](CS61B/README.md)
 * [The Web DevelopMent Bootcamp](TheWebDevelopMentBootcamp/README.md)
-  * [bootstrap3](TheWebDevelopMentBootcamp/bootstrap3/README.md)
-  * [bootstrap4](TheWebDevelopMentBootcamp/bootstrap4/README.md)
+  * [html5](TheWebDevelopMentBootcamp/html5.md)
+  * [css](TheWebDevelopMentBootcamp/css.md)
+  * [bootstrap3](TheWebDevelopMentBootcamp/bootstrap3.md)
+  * [bootstrap4](TheWebDevelopMentBootcamp/bootstrap4.md)
 
