@@ -6,3 +6,8 @@ home page au 2010 based on C: https://www.scs.stanford.edu/10au-cs144/
 home page Fall 2019 based on C++: https://cs144.github.io/
 
 lecture note: https://www.scs.stanford.edu/10au-cs144/notes/
+
+## Section1: concise introduction to Internet 
+
+## Section2: Transport Layer
+
