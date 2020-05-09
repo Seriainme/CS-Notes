@@ -16,5 +16,24 @@ Document: https://getbootstrap.com/docs/4.4/getting-started/introduction/
 ```html
 <p class="text-primary">text-primary</p>
 ```
-## typographical 印刷体
+## typographical 排版
+[排版](https://code.z01.com/v4/content/typography.html)
+```html
+<!-- 大字体 -->
+<h1 class="display-2">Display 2</h1>
+<!-- 引用 -->
+<blockquote class="blockquote">
+    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+
+<blockquote class="blockquote">
+    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <!-- 注脚作者名 -->
+    <footer class="blockquote-footer">Written by my cat <cite title="Blue Steele">Blue Steele</cite></footer>
+</blockquote>
+```
+
+## border
+[border 边框](https://code.z01.com/v4/utilities/borders.html)
+
 
