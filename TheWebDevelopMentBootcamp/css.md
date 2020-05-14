@@ -102,3 +102,11 @@ img {
 }
 
 ```
+
+## hover
+```css
+#mainNavbar .nav-link:hover {
+    color: #EA1C2C;
+}
+```
+hover: （盘旋）鼠标指向的时候颜色发生变化
