@@ -42,4 +42,52 @@ let y = "abc"; // ERROR
 alert("abc"); // 只是显示警示
 console.log("abc"); // 只在 console 打印
 let texts = prompt("some text"); // 给用户输入内容来交互
+```
 
+## Comparison Operators
+```javascript
+// Comparison Operators
+// x = 5
+x == "5" // true, Equal to
+x != "5" // false
+
+x === "5" // false, Equal value and type
+x !== "5" // true, Not equal value or equal type
+
+// y = null
+y == undefined // true
+y === undefined // false
+
+// == 强制类型转换
+
+// 例外：
+// NaN与任何值都不相等，包括NaN自身
+NaN == NaN //false
+NaN === NaN // false
+
+// !!来判断某个东西的真假
+!"hello" //false
+
+!!"hello" //true
+!!""  //false
+!!null //false
+!!0 //false
+!!NaN // false
+!!-1 // true
+
+// Flasy Values: false,0,"",null,undefined,NaN
+```
+
+## substring
+
+```javascript
+let answer = "okyes";
+answer.indexOf('yes'); // 2 
+answer.indexOf('aaa'); // -1
+```
+
+## forloop
+```javascript
+for(init; condition; step) {}
+for(let i = 0; i < 3; i++) {}
+```
