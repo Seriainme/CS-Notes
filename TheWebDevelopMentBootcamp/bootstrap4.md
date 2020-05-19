@@ -35,7 +35,7 @@ Document: https://getbootstrap.com/docs/4.4/getting-started/introduction/
 ## img
 ```html
 <img class="img-fluid" src="imgs/hand2.png">
-<!-- class="img-fluid: { height:auto; max-width: 100% } -->
+<!-- class="imgs-fluid: { height:auto; max-width: 100% } -->
 ```
 
 ## border
@@ -188,7 +188,7 @@ grid 基于 flexbox
         </div>
         <div class="col-lg-6">
           <img class="img-fluid" src="imgs/hand2.png">
-          <!-- img-fluid 图片全部显示 -->
+          <!-- imgs-fluid 图片全部显示 -->
         </div>
       </div>
     </section>
