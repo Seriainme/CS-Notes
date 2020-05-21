@@ -22,6 +22,9 @@ friends.shift(); // "First"  ["Chuck","Liz","David","Mattias","Amelie"];
 friends.indexOf("Liz") //   1
 friends.indexOf("Liz1") // -1
 // 深拷贝 slice(start,end)  不包括end
-friends.slice(1,3); // ["Liz","David"]
+friends.slice(1,3); // ["Liz","David"]  friends 本身不变化
+
+// splice(startIndex,Count) 删除元素，返回一个list(所删除的元素)
+friends.splice(1,2); // ["Liz", "David"]  friends 变为 ["Chuck", "Mattias", "Amelie"]
 
 ```
