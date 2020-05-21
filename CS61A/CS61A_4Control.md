@@ -13,6 +13,10 @@
     ...
 ...
 ```
+![statement](imgs/statement.png)
+
+![statement Demo](imgs/statementDemo.png)
+
 - 头部特化的求值规则
   - 指导了组内的语句什么时候被执行、是否会被执行
 - 多行程序的定义：
@@ -26,6 +30,10 @@
 - 函数体内的赋值语句不会影响全局帧
 - 局部赋值也可以将名称赋为间接量
 
+### Names Have No Meaning Without Environments
+- 每个表达式 is evaluated in the context of an environment
+- A name evaluates to the value(名称的计算结果) bound to that name(绑定到这个名字) in the earliest frame of the current environment(在当前环境的最早框架中) in which that name is found.
+![NameInFrame](imgs/NameInFrame.png)
 ## 条件语句
 ```python 
 if <expression>: # 布尔上下文
