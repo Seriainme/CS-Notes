@@ -42,3 +42,15 @@ def pressure(v, t, n=6.022e23):
   - 应该表示为具名参数的默认值
 - 永远不会改变的值
   - 就像基本常数k_b，应该定义在全局帧中。
+  
+## python 可以有多个 return 值
+```python
+def divide_exact(n,d):
+    return n // d, n % d
+quotient, remainder = divide_exact(2013, 10)
+>>> quotient
+201
+>>> remainder 
+3
+```
+- 实际上返回的是一个元组 tuple
