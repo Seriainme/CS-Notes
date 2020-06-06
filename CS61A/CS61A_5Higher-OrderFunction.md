@@ -50,7 +50,63 @@ square(4) # 16
 
 #      lambda            x            :          f(g(x))
 # "A function that    takes x    and returns     f(g(x))"
+
+# Lambda expressions can be used as an operator
+# or operand
+negate = lambda f, x: -f(x)
+negate(lambda x: x * x, 3)  # -9
 ```
+lambda 表达式做什么?
+我们可以把所有的函数写成lambda表达式吗?
+在什么情况下 lambda 表达式是有用的?
+lambda 表达式创建函数。
+当对一个 lambda 表达式求值时，它会生成一个函数。
+对于那些我们不需要用很久的函数,我们经常使用 lambda 来创建简短的匿名函数。
+
+# Iteration
+- function 可以自己调用自己
+```python
+def print_all(x):
+    print(x)
+    return print_all
+
+print_all(1)(3)(5)   # 1 3 5
+
+def print_sum(x):
+    print(x)
+    def sum(y):
+        return print_sum(x+y)
+    return sum
+
+print_sum(1)(3)(5)   # 1 4 9
+
+```
+
+## if
+![ifStatements](imgs/ifStatements.png)
+
+为什么 if 不是右边的结构？
+- 因为调用的求值规则
+
+## 逻辑操作
+- 短路
+  - A or B
+    - A 真 返回 A
+      - 1 or 2 # 1
+    - A 假 返回 B
+      - 0 or 2 # 2
+  - A and B
+    - A 真 返回 B 
+      - 1 and 2 # 2
+    - A 假 返回 A
+      - 0 and 2 # 0
+- 条件语句
+  - ```<consequent> if <predicate> else <alternative>```
+  
+## Design && Function Examples
+- 抽象
+  - 函数不区分内部函数和用户自定义函数
+- 变量命名的原则
 
 ## 函数装饰器
 - 将高阶函数用作执行def语句的一部分，叫做装饰器
