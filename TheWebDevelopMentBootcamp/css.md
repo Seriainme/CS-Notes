@@ -34,6 +34,12 @@ h1 {
     border-style: solid;
     /* the same */
     border: purple 5px solid;
+    /*圆角*/
+    border-radius: 15%;
+    
+    /*从左开始依次排开*/
+    float: left;
+
 }
 ```
 
@@ -110,3 +116,25 @@ img {
 }
 ```
 hover: （盘旋）鼠标指向的时候颜色发生变化
+
+## transition
+渐变
+```css
+button {
+    /*渐变色*/
+    transition: all 0.3s;
+    /*Safari 浏览器*/
+    -webkit-transition: all 0.3s;
+    /*firefox 浏览器*/
+    -moz-transition: all 0.3s;
+}
+```
+
+## display
+```css
+/*元素具有宽度高度特性，又具有同行特性*/
+#message {
+    width: 20%;
+    display: inline-block;
+}
+```
