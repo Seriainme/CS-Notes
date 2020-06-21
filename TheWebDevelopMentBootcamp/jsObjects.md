@@ -7,7 +7,8 @@ let person = {  // Object
     city : "Missouri",
     add: function(x,y) { // 可以在 object 上加入 方法
       return x+y;
-    }
+    },
+    //get(x){return x}
 }
 person.add(1,2) // 3
 ```
