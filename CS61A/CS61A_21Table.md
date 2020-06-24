@@ -25,6 +25,16 @@ CREATE TABLE parents AS
 SELECT parent FROM parents, dog WHERE child = name AND fur = "curly";
 ```
 
+## 用 Python 描述 SQL join
+```python
+def FROM(table_1, table_2):
+    for row_1 in table1:
+        for row_2 in table2:
+            yield row_1 + row_2
+```
+联接就像创建嵌套`for`循环。
+- 每一行`table_1`和每一行`table_2`，联接将对行的每种可能的组合进行迭代，并将其视为输入表
+
 ## Aliases and Dot Expressions(别名和点表达式)
 - 两个表可能共用一个列名，所以我们需要一种方法来区分表的列名。
 - 点表达式和别名 可以消除列值的歧义。

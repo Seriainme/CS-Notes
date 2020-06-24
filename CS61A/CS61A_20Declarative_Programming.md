@@ -5,6 +5,18 @@
 - 命令式语言
   -  "程序"是对计算过程的描述
   - `interpreter` 执行 `execution/evaluation` 规则
+## 用 Python 描述 SQL
+```python
+output_table = []
+for row in FROM(*input_tables):
+    if WHERE(row):
+        output_table += [SELECT(row)]
+if ORDER_BY:
+    output_table = ORDER_BY(output_table)
+if LIMIT:
+    output_table = output_table[:LIMIT]
+```
+注意，`ORDER BY`和`LIMIT`子句仅在确定了输出表中的所有行之后才应用。
 
 ## SQL
 - SQL(Structured Query Language 结构化查询语言)

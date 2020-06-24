@@ -31,3 +31,21 @@ sqlite> SELECT COUNT(*) from RECORDS;
 sqlite> SELECT title FROM records GROUP BY title HAVING count(*) > 1; -- 过滤组数少于 1 的组
 Programmer
 ```
+
+## 用 Python 描述 SQL Aggregation
+我们可以使用GROUP BY和HAVING 将行划分为组，并仅选择组的子集。
+```python
+output_table = []                                 # 输出多个 table
+for input_group in GROUP_BY(FROM(*input_tables)): # GROUP_BY 划分了子集
+    output_group = []
+    for row in input_group:
+        if WHERE(row):
+            output_group += [row]                 # 每个子集内部的 row 用 WHERE 筛选
+    if HAVING(output_group):                      # group 本身用 HAVING 筛选
+        output_table += [SELECT(output_group)]
+
+if ORDER_BY:
+    output_table = ORDER_BY(output_table)
+if LIMIT:
+    output_table = output_table[:LIMIT]
+```
