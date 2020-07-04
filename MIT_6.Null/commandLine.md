@@ -131,4 +131,18 @@ alias ll
 - 编辑 `.bashrc` 或 `.bash_profile` 来进行配置
 - 确保程序能够被 shell 找到
   - `export PATH="$PATH:/path/to/program/bin"`
-  
+- 配置文件的管理方法
+  - 使用版本控制系统进行管理
+  - 然后通过脚本将其 符号链接 到需要的地方
+### 可移植性
+- 配置文件可能并不能在多种设备上生效
+  - 针对不同的设备编写不同的配置
+```bash
+if [[ "$(uname)" == "Linux" ]]; then {do_something}; fi
+
+# 使用和 shell 相关的配置时先检查当前 shell 类型
+if [[ "$SHELL" == "zsh" ]]; then {do_something}; fi
+
+# 您也可以针对特定的设备进行配置
+if [[ "$(hostname)" == "myServer" ]]; then {do_something}; fi
+```
