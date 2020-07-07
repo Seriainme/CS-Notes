@@ -133,7 +133,7 @@ alias ll
   - `export PATH="$PATH:/path/to/program/bin"`
 - 配置文件的管理方法
   - 使用版本控制系统进行管理
-  - 然后通过脚本将其 符号链接 到需要的地方
+  - 然后通过脚本 (GNU stow) 将其 符号链接(`ln -s aaa.log aaa`) 到需要的地方
 ### 可移植性
 - 配置文件可能并不能在多种设备上生效
   - 针对不同的设备编写不同的配置
@@ -146,3 +146,18 @@ if [[ "$SHELL" == "zsh" ]]; then {do_something}; fi
 # 您也可以针对特定的设备进行配置
 if [[ "$(hostname)" == "myServer" ]]; then {do_something}; fi
 ```
+
+## SSH
+- `ssh jjgo@192.168.242.122`
+- `ssh jjgo@foobar.mit.edu` 具有 DNS 名称的服务器
+- 直接远程执行命令
+  - `ssh foobar@server ls`
+  - `ssh foobar@server ls | grep PATTERN`
+
+### 密钥生成
+-`ssh-keygen`
+- `ssh` 会查询 `.ssh/authorized_keys` 来确认用户可以被允许登陆
+- 拷贝公钥
+  - `cat .ssh/id_ed25519.pub | ssh foobar@remote 'cat >> ~/.ssh/authorized_keys'`
+  - 支持 `ssh-copy-id`
+    - `ssh-copy-id -i .ssh/id_ed25519.pub foobar@remote`
