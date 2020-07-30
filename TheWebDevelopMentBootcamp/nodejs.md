@@ -115,3 +115,18 @@ function createApplication() {
 // 这里把函数createApplication作为模块的输出暴露出去
 module.exports = createApplication;
 ```
+
+## package.json
+- 使用`npm init`输出宇哥新的 `package.json` 文件
+- `package.json`生成所有依赖包
+
+## 路由路径
+```javascript
+app.get('/user/:id', function(req, res){
+    res.send('user ' + req.params.id);
+});
+```
+- `id` 占位标识符
+  - 可以通过 `req.params.id` 获取
+    - `req` 是请求头
+    - `req.params` 是一个字典
