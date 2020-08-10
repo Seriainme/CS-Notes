@@ -36,9 +36,9 @@ H e r e  i t  i s
 Great
 G r e a t
 
-$ ls *.pdf | python ex.py
-# 所有 pdf 的 filename 都有空格
+$ ls *.pdf | python ex.py # 所有 pdf 的 filename 都有空格
 ```
+
 
 ## Big Data
 - 将 unix tools 和 写的程序结合可以给数据处理提供绝佳的环境
@@ -62,7 +62,10 @@ $ ls *.pdf | python ex.py
   - 最终的结果会反馈给driver program。
 ![ApacheSparkExecutionModel](imgs/ApacheSparkExecutionModel.png)
 
+
+
 ### Apache Spark 的接口
+
 - SparkContext提供了对集群管理器的访问。
 ```python
 >>> sc	
@@ -124,6 +127,6 @@ def vowels(line):
 >>> from poerator import add
 >>> data.flatMap(vowels).reduceByKey(add).collect()
 [('i', 189626), ('a', 233881), ('u', 110820),('o', 272697), ('e', 387705)]
-```    
+```
 
-    
+​    
