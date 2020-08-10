@@ -11,6 +11,7 @@
 ## 在 for 循环中用 iter
 - iter 中已经输出的值不会再出现
 - range 每次都能输出想要的值
+  
 ```python
 >>> for i in range(3,6):
 >>>     print(i)
@@ -40,15 +41,15 @@
 
 ## Build-in Iterator Functions
 - 许多内建的 Python 序列操作都会返回迭代器，这些迭代器会 lazily 地计算结果
-- ```map(func, iterable): ```: Iterate over func(x) for x in iterable 
-```filter(func, iterable):```: Iterate over x in iterable if func(x)
-```zip(first_iter, second_iter):``` : Iterate over co-indexed (x, y) pairs
-```reversed(sequence):``` : Iterate over x in a sequence in reverse order
+  - `map(func, iterable): `: Iterate over func(x) for x in iterable 
+  - `filter(func, iterable):`: Iterate over x in iterable if func(x)
+  - `zip(first_iter, second_iter):` : Iterate over co-indexed (x, y) pairs
+  - `reversed(sequence):` : Iterate over x in a sequence in reverse order
 
-要查看迭代器的内容，将生成的元素放入一个容器中:
-```list(iterable)```: Create a list containing all x in iterable
-```tuple(iterable)```: Create a tuple containing all x in iterable
-```sorted(iterable)```: Create a sorted list containing x in iterable
+- 要查看迭代器的内容，将生成的元素放入一个容器中:
+  - `list(iterable)`: Create a list containing all x in iterable
+  - `tuple(iterable)`: Create a tuple containing all x in iterable
+  - `sorted(iterable)`: Create a sorted list containing x in iterable
 
 ```python
 >>> bcd = ['b', 'c', 'd']

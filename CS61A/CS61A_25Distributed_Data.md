@@ -18,9 +18,14 @@ Unix操作系统（及变种如Linux, Mac OS 10）的基本特征。
 
 ## python programs in a Unix environment
 - `sys.stdin` 和 `sys.stdout` 的值提供了对Unix标准流文件的访问
+
 - 一个Python文件有一个支持`iteration, read, write`方法的接口。
+
 - 使用这些 "`files`"可以利用操作系统的文本处理抽象
+
 - `input` 和 `print` 功能还可以从`standard input`读取和写入`standard output`。 
+
+  
 
 ```python
 # ex.py
@@ -28,6 +33,10 @@ import sys
 for line in sys.stdin:
     sys.stdout.write(' '.join(line)) # 每个字都有空格
 ```
+
+
+
+
 
 ```shell script
 $ python ex.py
@@ -40,7 +49,9 @@ $ ls *.pdf | python ex.py # 所有 pdf 的 filename 都有空格
 ```
 
 
+
 ## Big Data
+
 - 将 unix tools 和 写的程序结合可以给数据处理提供绝佳的环境
 - 如果多个用户需要同时访问和编辑数据，可以使用数据库
 - 如果想要处理的数据大小超过了一台机器的范围，就需要使用分布式数据处理
