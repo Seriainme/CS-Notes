@@ -19,6 +19,7 @@
 ## eval function
 - `eval`函数计算一个表达式的值，它总是一个数字
 - 它是一个通用函数，根据表达式的类型（`primitive` 或 `call`）进行分配。
+  
 ```python
 def calc_eval(exp):
     if type(exp) in (int, float): # A number evaluates to itself
@@ -61,6 +62,7 @@ def calc_apply(operator, args):
     4. 评价这个表达式
     5. 如果发生任何错误，请报告这些错误。
     6. 否则打印表达式的值，并重复
+
 ```python
 def read_print_loop():
     """Run a read-print loop for Scheme expressions."""

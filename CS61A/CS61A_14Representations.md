@@ -60,29 +60,32 @@
     - 这个基于字典的分发方式是递增的，可扩展。任何新的数值类型可以将自己“安装”到现存的系统中，通过向这些字典添加新的条目。  
   - 数据导向编程。将**任意运算符作用于任意类型**，并且使用字典来储存多种组合的实现。
     - 优点：
+      
       - 管理了跨类型运算符的复杂性
     - 缺点：
       - 十分麻烦
+      
       - 引入新类型的开销不仅仅是为类型编写方法，还有实现跨类型操作的函数的构造和安装
-  ```python
-  # 这是字典 -> ('计算方法', ('数据类型1', '数据类型2')): 对应具体函数
-  >>> apply.implementations = {('mul', ('com', 'com')): mul_complex,
-                               ('mul', ('com', 'rat')): mul_complex_and_rational,
-                               ('mul', ('rat', 'com')): mul_rational_and_complex,
-                               ('mul', ('rat', 'rat')): mul_rational}
-  
-  # 泛用函数，支持各种数据类型 [key]->('计算方法', ('数据类型1', '数据类型2'))
-  # apply.implementations -> 字典
-  # apply.implementations[key] -> 函数
-  >>> def apply(operator_name, x, y):
-          tags = (type_tag(x), type_tag(y))
-          key = (operator_name, tags)
-          return apply.implementations[key](x, y)
-  
-  # 求值
-  >>> apply('add', ComplexRI(1.5, 0), Rational(3, 2))
-  ComplexRI(3.0, 0)
-  ```
+      
+        ```python
+        # 这是字典 -> ('计算方法', ('数据类型1', '数据类型2')): 对应具体函数
+        >>> apply.implementations = {('mul', ('com', 'com')): mul_complex,
+                                     ('mul', ('com', 'rat')): mul_complex_and_rational,
+                                     ('mul', ('rat', 'com')): mul_rational_and_complex,
+                                     ('mul', ('rat', 'rat')): mul_rational}
+        
+        # 泛用函数，支持各种数据类型 [key]->('计算方法', ('数据类型1', '数据类型2'))
+        # apply.implementations -> 字典
+        # apply.implementations[key] -> 函数
+        >>> def apply(operator_name, x, y):
+                tags = (type_tag(x), type_tag(y))
+                key = (operator_name, tags)
+                return apply.implementations[key](x, y)
+        
+        # 求值
+        >>> apply('add', ComplexRI(1.5, 0), Rational(3, 2))
+        ComplexRI(3.0, 0)
+        ```
   - 强制转换。将参数强制转换为**相同类型**的值，之后仅仅调用运算符(仅需要相同类型的运算符的字典)
     - 设计强制转换函数
     - 可以定义强制转换函数的字典
@@ -91,11 +94,12 @@
       - 可以让两个不同类型强制转换为第三个来降低了程序所需的转换函数总数
     - 缺点：
       - 会丢失信息
-   
+  
   
 ## Property Method
 - 用于从零个参数的函数凭空计算属性（Attribute）
 - `@property` 装饰器允许函数不使用标准调用表达式语法来调用
+  
   - ```python
     class s:
         # a getter function 
@@ -106,8 +110,8 @@
         # a setter function 
         @magnitude.setter
         def magnitude(self,value):
-            ... = value
-
+          ... = value
+  
     s.magnitude      # 可以这么调用 getter function
     s.magnitude = .. # 可以这么调用 setter function
     ```

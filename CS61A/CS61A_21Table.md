@@ -1,8 +1,12 @@
 # Table
 ## Joining Tables
 - 通过将多张表连接成一张表来组合数据，这是数据库系统中的基本操作。
+
 - 我们在本类中只重点介绍一种方法（内部连接）。
+
 - 如果连接两个表，左边的表有 m 条记录，右边的表有 n 条记录，那么连接后的表将有 mn 条记录
+
+  
 ```SQLite
 CREATE TABLE dogs AS
  SELECT "abraham" AS name, "long" AS fur UNION
@@ -19,8 +23,13 @@ CREATE TABLE parents AS
  SELECT "abraham"          , "clinton"         UNION
  ...;
 ```
+
+
 - 两张表 A和B 用逗号连接，得出 A和B中某行 的所有组合。
+  
   - Select the parents of curly-furred dogs
+  
+    
 ```SQLite
 SELECT parent FROM parents, dog WHERE child = name AND fur = "curly";
 ```

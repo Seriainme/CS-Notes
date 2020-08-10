@@ -14,10 +14,10 @@
 - 继承是一种将类联系在一起的技术
 - 一种常见的用法。两个类似的 classes 在 specialization 上的程度有差异。
 - specialized class 可以具有与一般类相同的属性，以及一些特殊情况下的行为。
-```python
-class <Name>(<Base Class>):
-    <suite>
-```
+  ```python
+  class <Name>(<Base Class>):
+      <suite>
+  ```
 - 概念上，新的 subclass 继承了基类的属性。
 - 子类可以 override 某些继承的属性
 - 利用继承，我们通过指定 subclass 与 base class 的不同之处来实现 subclass。
@@ -27,6 +27,7 @@ class <Name>(<Base Class>):
 - 在 class 中查看名字：
   - 如果它命名了 class 中的一个属性，返回这个 attribute value
   - 如果没有，去 base class 中找
+
 ```python
 class CheckingAccount(Account):
     """A bank account that charges for withdrawals."""

@@ -13,6 +13,8 @@
 
 ## string 是 对象
 - string 有属性
+
+  
 ```python
 s = "Hello"
 s.upper()    # 'HELLO'
@@ -24,12 +26,17 @@ ord(a)       # 65  对应的 ACSII 数
 hex(ord(a))  # '0x41' 是 65 对应的 16进制
 ```
 
+
+
 ## Object can change
+
 - 所有引用同一对象的名称都会受到变化的邮箱
   - list & dictionaries
   
 ## tuples
 - 不可改变的序列
+
+  
 ```python
 >>> (3,4) + (5,6)
 (3,4,5,6)
@@ -39,7 +46,11 @@ hex(ord(a))  # '0x41' 是 65 对应的 16进制
 error
 ```
 
+
+
 - 他能保护 values 不被改变
+
+  
 ```python
 >>> turtle = (1, 2, 3)
 >>> ooze()
@@ -52,7 +63,11 @@ error
 ['Anything could be inside']
 ```
 
+
+
 - 如果 tuple 内有可改变的序列，它的元素也有可能发生改变
+
+  
 ```python
 >>> s = ([1, 2], 3)
 >>> s[0] = 4
@@ -69,8 +84,11 @@ ERROR
 
 A is B  
   - 对应相同的 object 则相同 (类似 java 的 == )
-A == B
+  A == B
+
   - 对应相同的 value 则相同 (类似 java 的 equals )
+
+    
 ```python
 >>> [1,2] == [1,2]
 True
@@ -78,8 +96,13 @@ True
 False
 ```
 
+
+
 ## 一些陷阱
+
 - 默认实参值是函数的一部分，不是由调用生成的
+
+  
 ```python
 def f(s=[]):
     s.append(5)
@@ -89,4 +112,7 @@ f()     # 1
 f()     # 2
 f([1])  # 2
 ```
+
+
 ![defaultArgs](imgs/defaultArgs.png)
+

@@ -14,6 +14,9 @@
       - 解决方法： 嵌套函数
 
 ## 作为返回值的函数
+
+
+
 ```python
 def make_adder(n):  # 用来定义这个 function
     """
@@ -38,7 +41,10 @@ make_adder(4)(3) # 7
 
 ## Lambda 表达式
 - 使用 Lambda 表达式凭空创建函数，它会求值为匿名函数
+
 - 函数体具有单个返回表达式的函数
+
+  
 ```python
 square = lambda x: x * x # lambda x: x * x 求出了一个 function
 square(4) # 16
@@ -56,15 +62,19 @@ square(4) # 16
 negate = lambda f, x: -f(x)
 negate(lambda x: x * x, 3)  # -9
 ```
-lambda 表达式做什么?
-我们可以把所有的函数写成lambda表达式吗?
-在什么情况下 lambda 表达式是有用的?
-lambda 表达式创建函数。
-当对一个 lambda 表达式求值时，它会生成一个函数。
-对于那些我们不需要用很久的函数,我们经常使用 lambda 来创建简短的匿名函数。
+
+
+- lambda 表达式做什么?
+- 我们可以把所有的函数写成lambda表达式吗?
+- 在什么情况下 lambda 表达式是有用的?
+  - lambda 表达式创建函数。
+  - 当对一个 lambda 表达式求值时，它会生成一个函数。
+  - 对于那些我们不需要用很久的函数,我们经常使用 lambda 来创建简短的匿名函数。
 
 # Iteration
 - function 可以自己调用自己
+
+  
 ```python
 def print_all(x):
     print(x)
@@ -110,6 +120,8 @@ print_sum(1)(3)(5)   # 1 4 9
 
 ## 函数装饰器
 - 将高阶函数用作执行def语句的一部分，叫做装饰器
+
+  
 ```python
 def trace1(fn):   # 接受函数 f
     def wrapped(x):
@@ -137,11 +149,15 @@ another_triple(4)
 # ->  <function another_triple at 0x000001458C2EEA60> ( 4 )
 # 12
 ```
+
+
 - @trace1 影响 def 的执行规则
   - triple 并没有绑定到这个函数上
   - 而是绑定到了在新定义的函数 triple 上调用 trace1 的返回函数值上。
 
 等价关系：
+
+
 
 ```python
 @trace1   # 装饰器

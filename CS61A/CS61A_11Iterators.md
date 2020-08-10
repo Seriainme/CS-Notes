@@ -64,7 +64,10 @@
 
 ## 生成器(generator)
 - 特殊的 iterator
+
 - 从生成器函数而来
+
+  
 ```python
 def plus_minus(x):
 """Yield x and -x."""
@@ -82,6 +85,8 @@ def plus_minus(x):
 [7, 7]
 
 ```
+
+
 - 生成函数是一个产生值(yields values)而不是返回值(returning them)的函数。
 - 一个普通函数只 return 一次，一个生成函数可以 yield 多次。
 - 生成器是通过调用生成器函数自动创建的迭代器
@@ -90,7 +95,10 @@ def plus_minus(x):
 
 ## yield from
 - 生成器有时候也要输出迭代器
+
 - yield from 语句产生一个 迭代器 或 所有可迭代的值
+
+  
 ```python
 def a_then_b_for(a, b):
     """The elements of a followed by those of b.

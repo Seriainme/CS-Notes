@@ -67,7 +67,10 @@ create table parents as
 
 ## Arithmetic(算术)
 - 在 `select` 表达式中， `column` 名是 `row` 值。
+
 - 算术表达式可以将 `row` 值和常量相结合
+
+  
 ```SQLite
 create table lift as
  select 101 as chair, 2 as single, 2 as couple union
@@ -76,6 +79,10 @@ create table lift as
 
 select chair, single + 2 * couple as total from lift;
 ```
+
+
+
+
 |char|total|
 |:---:|:---:|
 |101|6|

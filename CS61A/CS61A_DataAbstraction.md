@@ -57,9 +57,14 @@ def denom(x):
 
 ## dict
 - 无顺序
+
 - 键值对
+
 - 两个 key 不能相同
+
 - key 不能是列表
+
+  
 ```python
 >>> numberals = {'I':1,'V':5,'X':10}    # dict 没有顺序
 >>> numberals
@@ -103,7 +108,10 @@ Traceback (most recent call last):
 TypeError: unhashable type: 'list'
 ```
 
+
+
 ## 如何知道违反了数据抽象原则
+
 - 简而言之，数据抽象违规是指您绕过 ADT 的构造函数和选择器，直接使用其在其余代码中的实现方式，从而假设其实现不会更改。
 - 我们不能假设我们知道 ADT 是如何构造的，除非使用构造函数，
 - 同样，我们也不能假设我们知道如何访问 ADT 的详细信息，除非通过选择器。 
