@@ -8,8 +8,12 @@
   - `within`：使用`n`种硬币为更小的金额`a - d`找零的方式，其中d是第一种硬币的面额。
 - 终止条件
   - 如果a正好是零，那么有一种找零方式。
+  
   - 如果a小于零，那么有零种找零方式。
+  
   - 如果n小于零，那么有零种找零方式。
+  
+    
 ```python
 >>> def count_change(a, kinds=(50, 25, 10, 5, 1)):
         """Return the number of ways to change amount a using coin kinds."""

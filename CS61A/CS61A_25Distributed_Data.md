@@ -34,10 +34,6 @@ for line in sys.stdin:
     sys.stdout.write(' '.join(line)) # 每个字都有空格
 ```
 
-
-
-
-
 ```shell script
 $ python ex.py
 Here it is
