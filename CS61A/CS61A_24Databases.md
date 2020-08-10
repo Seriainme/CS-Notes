@@ -2,8 +2,9 @@
 ## Create Table
 ![CreateTable](imgs/CreateTable.png)
 
-我们忽略一些细节后的精简版本
+- 我们忽略一些细节后的精简版本
 ![CreateTableDemo](imgs/CreateTableDemo.png)
+
 例子：
 ```SQLite
 CREATE TABLE numbers (n, note);
@@ -13,7 +14,7 @@ CREATE TABLE numbers (n, note DEFAULT "No comment");
 
 ## Drop Table
 ![drop table](imgs/DropTable.png)
-使用` if exists `如果不存在会 报错
+- 使用` if exists `如果不存在会 报错
 
 ## Modifying Tables
 ### Insert
